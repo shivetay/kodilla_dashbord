@@ -1,6 +1,11 @@
 /* global */
 
+@import 'partials/global';
 @import 'partials/normailze';
 @import 'partials/variables';
 @import 'partials/mixins';
 @import 'partials/grid';
+
+/* sections */
+@import 'partials/navigation';
+@import 'partials/userpanel';

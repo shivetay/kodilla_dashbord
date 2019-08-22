@@ -1,4 +1,14 @@
 /* global */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -336,5 +346,31 @@ template {
   */
 [hidden] {
   display: none;
+}
+
+/* Colors */
+/* Font sizes */
+/* Fonts */
+/* grid mixins */
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (min-content)[5];
+      grid-template-rows: repeat(5, min-content);
+  -ms-grid-columns: [nav-start] minmax(min-content, 8vw) [nav-end full-start] 1fr [center-start] (minmax(min-content, 14rem))[8] [center-end] 1fr [full-end];
+      grid-template-columns: [nav-start] minmax(min-content, 8vw) [nav-end full-start] 1fr [center-start] repeat(8, minmax(min-content, 14rem)) [center-end] 1fr [full-end];
+}
+
+/* sections */
+.navigation {
+  background: burlywood;
+  grid-row: 1 / -1;
+  grid-column: nav-start / nav-end;
+}
+
+.user-panel {
+  background: yellow;
+  grid-row: 1 / 1;
+  grid-column: full-start / full-end;
 }
 /*# sourceMappingURL=style.css.map */

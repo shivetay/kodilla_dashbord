@@ -1,0 +1,31 @@
+/* grid mixins */
+
+@mixin nav-start {
+  grid-row: 1 / -1;
+  grid-column: nav-start / nav-end;
+}
+
+@mixin full-start {
+  grid-row: 1 / 1;
+  grid-column: full-start / full-end;   
+}
+
+@mixin title-grid {
+	grid-row: 2 / 2;
+	grid-column:  full-start / full-end;
+}
+
+@mixin calendar {
+	grid-row: 3 / 3;
+	grid-column:  full-start / full-end;
+}
+
+@mixin stats {
+	grid-row: 4 / 4;
+	grid-column:  center-start / center-end;
+}
+
+@mixin graph {
+	grid-row: 5/ -1;
+	grid-column:  center-start / center-end;
+}
