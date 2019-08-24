@@ -1,5 +1,34 @@
 
 .navigation{
-  background: burlywood;
+
+  background: $color-dark-main;
   @include nav-start;
+
+  &__item{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    ul{
+      @include reomve-list-styling;
+      padding: 0;
+    }
+
+    &--links{
+      text-decoration: none;
+      color: $header-color-grey;
+      font-size: $page-header-font-size;
+      text-transform: capitalize;
+      padding: 3rem;
+    }
+  }
+
+  &__logo{
+    color: $color-font-light-second;
+  }
+
+  &__hamburger{
+    color: $header-color-grey-light;
+  }
 }

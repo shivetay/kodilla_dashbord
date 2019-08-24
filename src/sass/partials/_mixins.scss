@@ -29,3 +29,7 @@
   grid-row: 5/ -1;
   grid-column: full-start / full-end;
 }
+
+@mixin reomve-list-styling{
+  list-style: none;
+}

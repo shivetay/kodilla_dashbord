@@ -1,8 +1,9 @@
 /* global */
-
 @import 'partials/global';
 @import 'partials/normailze';
+@import 'partials/components';
 @import 'partials/variables';
+@import 'partials/typography';
 @import 'partials/mixins';
 @import 'partials/grid';
 
@@ -12,3 +13,4 @@
 @import 'partials/title';
 @import 'partials/calendar';
 @import 'partials/statistics';
+@import 'partials/graph';
