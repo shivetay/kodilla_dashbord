@@ -373,4 +373,22 @@ template {
   grid-row: 1 / 1;
   grid-column: full-start / full-end;
 }
+
+.title {
+  grid-row: 2 / 2;
+  grid-column: full-start / full-end;
+  background: palevioletred;
+}
+
+.calendar {
+  grid-row: 3 / 3;
+  grid-column: full-start / full-end;
+  background: firebrick;
+}
+
+.statistics {
+  grid-row: 4 / 4;
+  grid-column: full-start / full-end;
+  background: olivedrab;
+}
 /*# sourceMappingURL=style.css.map */

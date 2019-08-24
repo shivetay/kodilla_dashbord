@@ -11,21 +11,21 @@
 }
 
 @mixin title-grid {
-	grid-row: 2 / 2;
-	grid-column:  full-start / full-end;
+  grid-row: 2 / 2;
+  grid-column: full-start / full-end;
 }
 
 @mixin calendar {
-	grid-row: 3 / 3;
-	grid-column:  full-start / full-end;
+  grid-row: 3 / 3;
+  grid-column: full-start / full-end;
 }
 
 @mixin stats {
-	grid-row: 4 / 4;
-	grid-column:  center-start / center-end;
+  grid-row: 4 / 4;
+  grid-column: full-start / full-end;
 }
 
 @mixin graph {
-	grid-row: 5/ -1;
-	grid-column:  center-start / center-end;
+  grid-row: 5/ -1;
+  grid-column: full-start / full-end;
 }
