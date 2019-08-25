@@ -1,4 +1,13 @@
 .user-panel{
-  background: yellow;
-  @include full-start;
+  background: $color-font-light-second;
+  display: flex;
+  justify-content: flex-end;
+  // @include flex-row;
+  height: 5rem;
+  @include  width-calc;
+  @include margin-pos;
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid $header-color-grey;
+  
 }

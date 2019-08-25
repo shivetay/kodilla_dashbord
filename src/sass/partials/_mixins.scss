@@ -1,5 +1,5 @@
 /* grid mixins */
-
+/*
 @mixin nav-start {
   grid-row: 1 / -1;
   grid-column: nav-start / nav-end;
@@ -29,7 +29,23 @@
   grid-row: 5/ -1;
   grid-column: full-start / full-end;
 }
-
+*/
 @mixin reomve-list-styling{
   list-style: none;
+}
+
+// @mixin flex-row {
+//   flex: 1 1 100%;
+// }
+
+@mixin width-calc {
+  width: calc(100% - 200px);
+}
+
+@mixin margin-pos {
+  margin-left: 20rem;
+}
+
+@mixin margin-main {
+  margin: 2rem 2rem 0 22rem;
 }

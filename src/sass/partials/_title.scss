@@ -1,4 +1,5 @@
 .title{
-  @include title-grid;
   background: palevioletred;
+  @include width-calc;
+  @include margin-main;
 }

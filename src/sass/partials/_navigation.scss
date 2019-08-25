@@ -2,7 +2,36 @@
 .navigation{
 
   background: $color-dark-main;
-  @include nav-start;
+  height: 100vh;
+  width: 20rem;
+  position: fixed;
+  // flex: 0 0 14%;
+  left: 0;
+  top: 0;
+  /* logo tab */
+
+  &--container{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+  }
+
+  &__logo{
+    color: $color-font-light-second;
+    font-size: 2.5rem;
+    font-family: $logo-font;
+    font-style: oblique;
+    text-decoration: none;
+    padding: 1rem;
+  }
+
+  &__hamburger{
+    color: $header-color-grey-light;
+    font-size: 2rem;
+    padding: 1rem;
+  }
+
+  /* links tab */
 
   &__item{
     display: flex;
@@ -12,23 +41,74 @@
 
     ul{
       @include reomve-list-styling;
-      padding: 0;
+      padding: .5rem 0 1rem 0;
+      border-bottom: 1px solid $header-color-grey;
+
+      li{
+        height: 4rem;
+        padding-top: 1rem;
+        transition: all .3s;
+
+        &:last-child{margin-bottom: 1.2rem;}
+
+        &:hover{
+          border-left: 4px solid $button-color-orange;
+          background: $header-color-grey-light;
+        }
+
+        &:hover a{color: $color-font-light-second;}
+      }
     }
 
     &--links{
       text-decoration: none;
       color: $header-color-grey;
       font-size: $page-header-font-size;
+      font-family: $brand-font;
+      font-weight: 300;
       text-transform: capitalize;
       padding: 3rem;
+      transition: all .3s;
     }
   }
 
-  &__logo{
-    color: $color-font-light-second;
-  }
+  /* manager tab */
+  &__user{
+    &--container{
+      display: flex;
+    }
 
-  &__hamburger{
-    color: $header-color-grey-light;
+    &--manager{
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+
+      img{
+        width: 25%;
+        height: 25%;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+    }
+
+    &--name{
+      align-self: flex-end;
+      font-size: $small-link-font-size;
+      font-family: $paragraph-font;
+      font-weight: 300;
+      color: $color-blue;
+    }
+
+    &--img{
+      margin: 2rem 2rem 0 2rem;
+    }
+
+    &--header{
+      text-transform: capitalize;
+      color: $header-color-grey;
+      font-family: $paragraph-font;
+      font-size: $page-header-font-size;
+      margin: 2rem 2rem 0 2rem;
+    }
   }
 }

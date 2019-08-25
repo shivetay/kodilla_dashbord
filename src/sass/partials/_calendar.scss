@@ -1,4 +1,7 @@
 .calendar{
-  @include calendar;
+  // @include calendar;
   background: firebrick;
+  @include width-calc;
+  // margin-left: 20rem;
+  // margin-top: 50rem;
 }
