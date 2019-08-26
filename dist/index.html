@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body>
-  <div class="grid">
+  <div class="flex">
     <nav class="navigation">
         <div class="navigation--container">
           <a class="navigation__logo" href="#">
@@ -68,30 +68,51 @@
       </nav><!--end nav-->
     <section class="user-panel">
       <div class="user-panel__cash">
-        15000.00
+        <span>15000.00</span> 
       </div>
       <div class="user-panel__notification">
-        G
+        <span>Icon</span>
       </div>
       <div class="user-panel__user">
-        O George McFly
+        <span>O George McFly</span>
       </div>
       <div class="user-panel__logout">
-        H
+        <span>Icon</span>
       </div>
     </section><!--user-panel-->
-    <section class="title">
-      title
-    </section><!--end title-->
-    <section class="calendar">
-      calendar
-    </section><!--end calnedar-->
-    <section class="statistics">
-      stats
-    </section><!--end statistics-->
-    <section class="graph">
-      graph img
-    </section><!--end graph-->
-  </div>
+    <div class="container">
+      <section class="title">
+        <h2 class="title__header">
+          General Statistic
+        </h2>
+      </section><!--end title-->
+      <section class="calendar">
+        <div class="calendar__pick">
+          <div class="calendar__pick--container">
+            <span class="date--fr">
+              26.08.2019
+            </span>
+            <span class="date--to">
+              26.08.2019 
+            </span>
+            <span class="date--icon">
+              X
+            </span>
+          </div>
+        </div><!--end pick-->
+        <!-- <div class="calendar__pick--button"> -->
+          <button class="calendar__button btn">
+            X
+          </button>
+        <!-- </div> -->
+      </section><!--end calnedar-->
+      <section class="statistics">
+        stats
+      </section><!--end statistics-->
+      <section class="graph">
+        graph img
+      </section><!--end graph-->
+    </div><!--end container-->
+  </div><!--end flex-->
 </body>
 </html>

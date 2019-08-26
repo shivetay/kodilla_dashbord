@@ -30,13 +30,12 @@
   grid-column: full-start / full-end;
 }
 */
+@mixin flex-position{
+  flex: 1 1 100%;
+}
 @mixin reomve-list-styling{
   list-style: none;
 }
-
-// @mixin flex-row {
-//   flex: 1 1 100%;
-// }
 
 @mixin width-calc {
   width: calc(100% - 200px);
@@ -48,4 +47,12 @@
 
 @mixin margin-main {
   margin: 2rem 2rem 0 22rem;
+}
+
+@mixin border-bottom{
+  border-bottom: 1px solid $header-color-grey;
+}
+
+@mixin segment-color {
+  background: $color-font-light-second;
 }

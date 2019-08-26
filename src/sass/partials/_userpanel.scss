@@ -2,12 +2,49 @@
   background: $color-font-light-second;
   display: flex;
   justify-content: flex-end;
-  // @include flex-row;
   height: 5rem;
   @include  width-calc;
   @include margin-pos;
   position: sticky;
   top: 0;
-  border-bottom: 1px solid $header-color-grey;
+  @include border-bottom;
   
+  &__cash,
+  &__notification,
+  &__user,
+  &__logout{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    border-left: 1px solid $header-color-grey-light;
+  }
+
+  &__cash,
+  &__user{
+    padding: 0 5rem 0 5rem;
+  }
+
+  &__notification,
+  &__logout{
+    padding: 0 2rem 0 2rem;
+
+    span{
+      font-size: $page-header-font-size;
+      color: $header-color-grey;
+    }
+  }
+
+  &__cash{
+    span{
+      font-size: $page-header-font-size;
+      color: $header-color-grey;
+    }
+  }
+  
+  &__user{
+    span{
+      color: $color-blue;
+      font-size: $small-link-font-size;
+    }
+  }
 }

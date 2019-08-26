@@ -5,10 +5,19 @@
 //   grid-template-columns: [nav-start] minmax(min-content, max-content) [nav-end full-start] 1fr [center-start] repeat(8, minmax(min-content, 14rem)) [center-end] 1fr [full-end];
 // }
 
-.grid{
+.flex{
   display: flex;
   flex-wrap: wrap;
   align-items: flex-end;
   align-content: center;
   width: 100%;
+}
+
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  align-content: center;
+  @include width-calc;
+  @include margin-main;
 }
