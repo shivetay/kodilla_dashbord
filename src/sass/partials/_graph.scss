@@ -1,4 +1,4 @@
 .graph{
-  // @include graph;
-  background: brown;
+  @include segment-color;
+  @include flex-position;
 }

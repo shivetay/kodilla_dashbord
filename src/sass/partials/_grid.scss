@@ -5,6 +5,14 @@
 //   grid-template-columns: [nav-start] minmax(min-content, max-content) [nav-end full-start] 1fr [center-start] repeat(8, minmax(min-content, 14rem)) [center-end] 1fr [full-end];
 // }
 
+.grid{
+  display: grid;
+  grid-template-rows: repeat(2, min-content);
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 5rem;
+  justify-content: space-between;
+}
+
 .flex{
   display: flex;
   flex-wrap: wrap;

@@ -1,4 +1,31 @@
-.statistics{
-  // @include stats;
-  background: olivedrab;
+.statistic{
+  @include segment-color;
+  @include flex-position;
+  padding: 4rem 0;
+  display: flex;
+  justify-content: center;
+
+
+  &__element{
+    display: flex;
+    flex-wrap: nowrap;
+    place-self: center stretch;
+
+    &--1,
+    &--2,
+    &--3,
+    &--4{@include border-bottom;}
+    
+    &--header{  
+      span{
+        color: $paragraph-color;
+        margin-left: 16rem;
+        justify-self: end;
+      }
+
+      .element--3{margin-left: 24rem;}
+
+      .element--4{margin-left: 18rem;}
+    }
+  }
 }

@@ -15,42 +15,52 @@
           <a class="navigation__logo" href="#">
             Just do it
           </a> 
-          <div class="navigation__hamburger">H</div>
+          <div class="navigation__hamburger">
+            <input type="checkbox" class="navigation__hamburger--toggler">
+            <div class="hamburger"><div></div></div>
+          </div>
         </div>
         <div class="navigation__item">
           <ul>
             <li>
               <a href="" class="navigation__item--links">
+                  <span class="icon_item icon-general"></span>
               general
             </a>
             </li>
             <li>
               <a href="" class="navigation__item--links">
+                <span class="icon_item icon-details"></span>
               details
               </a>
             </li>
             <li>
               <a href="" class="navigation__item--links">
+                  <span class="icon_item icon-links"></span>
                 links
               </a>
             </li>
             <li>
               <a href="" class="navigation__item--links">
+                <span class="icon__item icon-banners"></span>
                 banners
               </a>
             </li>
             <li>
               <a href="" class="navigation__item--links">
+                  <span class="icon_item icon-links icon-personaldata"></span>
                 personal data
               </a>
             </li>
             <li>
               <a href="" class="navigation__item--links">
+                  <span class="icon_item icon-links icon-payout"></span>
                 payouts
               </a>
             </li>
             <li>
               <a href="" class="navigation__item--links">
+                  <span class="icon_item icon-links icon-postback"></span>
                 postbacks
               </a>
             </li>
@@ -68,16 +78,22 @@
       </nav><!--end nav-->
     <section class="user-panel">
       <div class="user-panel__cash">
-        <span>15000.00</span> 
+        <span>
+          <span class="icon__item icon-wallet"></span> 
+          15000.00 
+          <span class="icon__item icon-arrow-down-small"></span>
+        </span> 
       </div>
       <div class="user-panel__notification">
-        <span>Icon</span>
+        <span class="icon__item icon-notification"></span>
       </div>
       <div class="user-panel__user">
-        <span>O George McFly</span>
+        <span> <span class="icon__item icon-login"></span> 
+        George McFly
+      </span>
       </div>
       <div class="user-panel__logout">
-        <span>Icon</span>
+          <span class="icon__item icon-quit"></span>
       </div>
     </section><!--user-panel-->
     <div class="container">
@@ -95,19 +111,36 @@
             <span class="date--to">
               26.08.2019 
             </span>
-            <span class="date--icon">
-              X
-            </span>
+            <span class="icon__item icon-calendar"></span>
           </div>
         </div><!--end pick-->
         <!-- <div class="calendar__pick--button"> -->
-          <button class="calendar__button btn">
-            X
-          </button>
+          <button class="calendar__button btn"><span class="icon__item icon-refresh"></span></button>
         <!-- </div> -->
       </section><!--end calnedar-->
-      <section class="statistics">
-        stats
+      <section class="statistic">
+        <div class="grid">
+          <div class="statistic__element--1 statistic__element">
+            <h3 class="statistic__element--header">
+              Visti Signups <span class="element--1">234</span>
+            </h3>
+          </div>
+          <div class="statistic__element--2 statistic__element">
+            <h3 class="statistic__element--header">
+              Net Deposits <span class="element--2">654</span>
+            </h3>
+          </div>
+          <div class="statistic__element--3 statistic__element">
+            <h3 class="statistic__element--header">
+              FTD <span class="element--3">652</span>
+            </h3>
+          </div>
+          <div class="statistic__element--4 statistic__element">
+            <h3 class="statistic__element--header">
+              Turn over  <span class="element--4">785</span>
+            </h3>
+          </div>
+        </div><!--end grid-->
       </section><!--end statistics-->
       <section class="graph">
         graph img
