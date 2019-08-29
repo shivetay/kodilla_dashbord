@@ -22,3 +22,11 @@ $small-link-font-size: 1.3rem;
 $logo-font: 'Indie Flower', cursive;
 $brand-font: 'Roboto', sans-serif;
 $paragraph-font: 'Lato', sans-serif;
+
+
+/* brakepoints */
+$bp-largest: 75em; // 1200px/16 = 75em
+$bp-lagre: 68em; // 1088
+$bp-slarge: 56em; // 900
+$bp-medium: 48em; // 767px/16
+$bp-small: 40em;

@@ -21,11 +21,27 @@
         color: $paragraph-color;
         margin-left: 16rem;
         justify-self: end;
+
+        @include respond(desktop) {
+          margin-left: 8rem;
+        }
       }
 
-      .element--3{margin-left: 24rem;}
+      .element--3{
+        margin-left: 24rem;
 
-      .element--4{margin-left: 18rem;}
+        @include respond(desktop) {
+          margin-left: 16rem;
+        }
+      }
+
+      .element--4{
+        margin-left: 18rem;
+
+        @include respond(desktop) {
+          margin-left: 10rem;
+        }
+      }
     }
   }
 }

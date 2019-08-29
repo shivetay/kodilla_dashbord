@@ -8,6 +8,11 @@
   // flex: 0 0 14%;
   left: 0;
   top: 0;
+
+  @include respond(phone) {
+    width: 6rem;
+  }
+
   /* logo tab */
 
   &--container{
@@ -15,23 +20,23 @@
     flex-wrap: nowrap;
     justify-content: space-around;
 
-    & .navigation__hamburger--toggler{
-        position: absolute;
-        cursor: pointer;
-        width: 6rem;
-        height: 6rem;
-        left: 15rem;
-        opacity: 0;
+    .navigation__hamburger--toggler{
+      position: absolute;
+      cursor: pointer;
+      width: 6rem;
+      height: 6rem;
+      left: 15rem;
+      opacity: 0;
     }
 
     /* animation X */
 
-    & .navigation__hamburger--toggler:checked + .hamburger > div{
+    .navigation__hamburger--toggler:checked + .hamburger > div{
       transform: rotate(135deg);
     }
 
-    & .navigation__hamburger--toggler:checked + .hamburger > div::before,
-    & .navigation__hamburger--toggler:checked + .hamburger > div::after{
+    .navigation__hamburger--toggler:checked + .hamburger > div::before,
+    .navigation__hamburger--toggler:checked + .hamburger > div::after{
       top: 0;
       transform: rotate(90deg);
     }
@@ -46,6 +51,10 @@
     font-style: oblique;
     text-decoration: none;
     padding: 1rem;
+
+    @include respond(phone) {
+      display: none;
+    }
   }
 
   /* hamburger */
@@ -63,6 +72,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    display: none;
+
+    @include respond(phone) {
+      display: flex;
+      margin-left: 1rem;
+    }
+
   }
 
   .hamburger > div{
@@ -71,7 +87,7 @@
     width: 45%;
     height: 2px;
     background: $color-font-light;
-    display: flex; 
+    display: flex;
     justify-content: center;
     align-items: center;
     left: -4rem;
@@ -99,6 +115,14 @@
   /* line down */
   .hamburger > div::after{top: 1rem;}
 
+  .hamburger > div::before{
+    @include respond(phone) {
+      top: -8px;
+    }
+  }
+
+  
+
   /* links tab */
 
   &__item{
@@ -111,6 +135,10 @@
       @include reomve-list-styling;
       padding: .5rem 0 1rem 0;
       @include border-bottom;
+
+      @include respond(phone) {
+        display: none;
+      }
 
       li{
         height: 4rem;
@@ -151,6 +179,10 @@
       flex-wrap: nowrap;
       align-items: center;
 
+      @include respond(phone) {
+        display: none;
+      }
+
       img{
         width: 25%;
         height: 25%;
@@ -165,6 +197,10 @@
       font-family: $paragraph-font;
       font-weight: 300;
       color: $color-blue;
+
+      @include respond(phone) {
+        display: none;
+      }
     }
 
     &--img{
@@ -174,6 +210,10 @@
     &--header{
       text-transform: capitalize;
       margin: 2rem 2rem 0 2rem;
+
+      @include respond(phone) {
+        display: none;
+      }
     }
   }
 }

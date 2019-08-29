@@ -5,9 +5,18 @@
   height: 5rem;
   @include  width-calc;
   @include margin-pos;
+  @include border-bottom;
   position: sticky;
   top: 0;
-  @include border-bottom;
+  
+  @include respond(desktop) {
+		width: 100%;
+  }
+  
+  @include respond(phone) {
+    position: fixed;
+    bottom: 0;
+  }
   
   &__cash,
   &__notification,
@@ -21,12 +30,20 @@
 
   &__cash,
   &__user{
-    padding: 0 5rem 0 5rem;
+    padding: 0 5rem;
+
+    @include respond(desktop) {
+      padding: 0 2rem;
+    } 
   }
 
   &__notification,
   &__logout{
-    padding: 0 2rem 0 2rem;
+    padding: 0 2rem;
+
+    @include respond(desktop) {
+      padding: 0 1.4rem;
+    } 
 
     span{
       font-size: $page-header-font-size;

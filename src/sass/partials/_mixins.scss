@@ -39,14 +39,26 @@
 
 @mixin width-calc {
   width: calc(100% - 200px);
+
+  @include respond(phone) {
+    width: 100%;
+  }
 }
 
 @mixin margin-pos {
   margin-left: 20rem;
+
+  @include respond(phone) {
+    margin-left: 6rem;
+  }
 }
 
 @mixin margin-main {
   margin: 2rem 2rem 0 22rem;
+
+  @include respond(phone) {
+    margin: 2rem 2rem 0 8rem;
+  }
 }
 
 @mixin border-bottom{
@@ -56,3 +68,33 @@
 @mixin segment-color {
   background: $color-font-light-second;
 }
+
+/* media queries */
+/* brakepoints arg 
+- phone
+- tab-port
+- tab-land
+- desktop
+- big
+- xlarge
+*/
+ @mixin respond($brakepoint) {
+   @if $brakepoint == phone {
+     @media (max-width: $bp-small) { @content };
+   }
+   @if $brakepoint == tab-port {
+     @media (max-width: $bp-medium) { @content};
+   }
+   @if $brakepoint == tab-land {
+     @media (max-width: $bp-slarge) { @content};
+   }
+   @if $brakepoint == desktop {
+     @media (max-width: $bp-lagre) { @content};
+   }
+   @if $brakepoint == big {
+     @media (max-width: $bp-largest) { @content };
+   }
+   @if $brakepoint == xlarge {
+    @media (min-width: 1500px) { @content };
+   }
+ }
