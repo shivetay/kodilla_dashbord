@@ -78,23 +78,23 @@
 - big
 - xlarge
 */
- @mixin respond($brakepoint) {
-   @if $brakepoint == phone {
-     @media (max-width: $bp-small) { @content };
-   }
-   @if $brakepoint == tab-port {
-     @media (max-width: $bp-medium) { @content};
-   }
-   @if $brakepoint == tab-land {
-     @media (max-width: $bp-slarge) { @content};
-   }
-   @if $brakepoint == desktop {
-     @media (max-width: $bp-lagre) { @content};
-   }
-   @if $brakepoint == big {
-     @media (max-width: $bp-largest) { @content };
-   }
-   @if $brakepoint == xlarge {
-    @media (min-width: 1500px) { @content };
-   }
- }
+@mixin respond($brakepoint) {
+  @if $brakepoint == phone {
+    @media (max-width: $bp-small) { @content; }
+  }
+  @if $brakepoint == tab-port {
+    @media (max-width: $bp-medium) { @content; }
+  }
+  @if $brakepoint == tab-land {
+    @media (max-width: $bp-slarge) { @content; }
+  }
+  @if $brakepoint == desktop {
+    @media (max-width: $bp-lagre) { @content; }
+  }
+  @if $brakepoint == big {
+    @media (max-width: $bp-largest) { @content; }
+  }
+  @if $brakepoint == xlarge {
+    @media (min-width: 1500px) { @content; }
+  }
+}

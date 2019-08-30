@@ -10,12 +10,7 @@
   top: 0;
   
   @include respond(desktop) {
-		width: 100%;
-  }
-  
-  @include respond(phone) {
-    position: fixed;
-    bottom: 0;
+    width: 100%;
   }
   
   &__cash,
