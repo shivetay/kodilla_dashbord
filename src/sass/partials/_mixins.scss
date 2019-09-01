@@ -69,6 +69,20 @@
   background: $color-font-light-second;
 }
 
+@mixin table-position{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  @include segment-color;
+  @include flex-position;
+}
+
+@mixin table-border{
+  // border-bottom: 1px solid $header-color-grey;
+  border-top: 1px solid $header-color-grey;
+}
+
 /* media queries */
 /* brakepoints arg 
 - phone

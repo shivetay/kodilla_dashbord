@@ -1,5 +1,5 @@
 {
-	'user strict'
+	'user strict';
 
 	const inputCheck = document.querySelector('.navigation__hamburger--toggler');
 
