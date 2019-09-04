@@ -37,6 +37,21 @@
   list-style: none;
 }
 
+@mixin wraper-positions {
+  width: calc(100% - 20px);
+  margin: 0 2rem 0 0;
+
+  @include respond(desktop) {
+    width: calc(100% - 8px);
+  }
+
+  @include respond(phone) {
+    margin: 0 8rem 0 0;
+    width: calc(100% - 8px);
+    overflow-x: hidden;
+  }
+}
+
 @mixin width-calc {
   width: calc(100% - 200px);
 
@@ -54,7 +69,7 @@
 }
 
 @mixin margin-main {
-  margin: 2rem 2rem 0 22rem;
+  margin: 2rem 0 0 22rem;
 
   @include respond(phone) {
     margin: 2rem 2rem 0 8rem;

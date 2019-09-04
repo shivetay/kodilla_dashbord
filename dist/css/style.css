@@ -540,7 +540,7 @@ h4 {
   -ms-flex-line-pack: center;
       align-content: center;
   width: calc(100% - 200px);
-  margin: 2rem 2rem 0 22rem;
+  margin: 2rem 0 0 22rem;
 }
 
 @media (max-width: 40em) {
@@ -558,6 +558,39 @@ h4 {
 @media (max-width: 40em) {
   .container {
     width: 100%;
+  }
+}
+
+#pages > * {
+  display: none;
+}
+
+#pages > .active {
+  display: block;
+}
+
+#pages,
+#general,
+#links {
+  width: calc(100% - 20px);
+  margin: 0 2rem 0 0;
+}
+
+@media (max-width: 68em) {
+  #pages,
+  #general,
+  #links {
+    width: calc(100% - 8px);
+  }
+}
+
+@media (max-width: 40em) {
+  #pages,
+  #general,
+  #links {
+    margin: 0 8rem 0 0;
+    width: calc(100% - 8px);
+    overflow-x: hidden;
   }
 }
 

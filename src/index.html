@@ -23,43 +23,43 @@
         <div class="navigation__item">
           <ul>
             <li>
-              <a href="" class="navigation__item--links">
+              <a href="#general" class="navigation__item--links">
                   <span class="icon_item icon-general"></span>
               general
             </a>
             </li>
             <li>
-              <a href="" class="navigation__item--links">
+              <a href="#details" class="navigation__item--links">
                 <span class="icon_item icon-details"></span>
               details
               </a>
             </li>
             <li>
-              <a href="" class="navigation__item--links">
+              <a href="#links" class="navigation__item--links">
                   <span class="icon_item icon-links"></span>
                 links
               </a>
             </li>
             <li>
-              <a href="" class="navigation__item--links">
+              <a href="#banner" class="navigation__item--links">
                 <span class="icon__item icon-banners"></span>
                 banners
               </a>
             </li>
             <li>
-              <a href="" class="navigation__item--links">
+              <a href="#personal" class="navigation__item--links">
                   <span class="icon_item icon-links icon-personaldata"></span>
                 personal data
               </a>
             </li>
             <li>
-              <a href="" class="navigation__item--links">
+              <a href="#payouts" class="navigation__item--links">
                   <span class="icon_item icon-links icon-payout"></span>
                 payouts
               </a>
             </li>
             <li>
-              <a href="" class="navigation__item--links">
+              <a href="#postbacks" class="navigation__item--links">
                   <span class="icon_item icon-links icon-postback"></span>
                 postbacks
               </a>
@@ -96,55 +96,75 @@
           <span class="icon__item icon-quit"></span>
       </div>
     </section><!--user-panel-->
+  </div><!--end flex-->
+
+  <!-- handelbar templates -->
+  <div id="pages">
+    <section id="general" class="active">
+    </section>
+    <section id="links">
+    </section>
+    <section id="banner">
+    </section>
+    <section id="personal">
+    </section>
+  </div>
+
+  <script id="template-main-general" type="text/x-handlebars-template">
+  <div class="container">
+    <div class="title">
+      <h2 class="title__header">
+        General Statistic
+      </h2>
+    </div><!--end title-->
+    <section class="calendar">
+      <div class="calendar__pick">
+        <div class="calendar__pick--container">
+          <span class="date--fr">
+            26.08.2019
+          </span>
+          <span class="date--to">
+            26.08.2019 
+          </span>
+          <span class="icon__item icon-calendar"></span>
+        </div>
+      </div><!--end pick-->
+      <!-- <div class="calendar__pick--button"> -->
+        <button class="calendar__button btn"><span class="icon__item icon-refresh"></span></button>
+      <!-- </div> -->
+    </section><!--end calnedar-->
+    <section class="statistic">
+      <div class="grid">
+        <div class="statistic__element--1 statistic__element">
+          <h3 class="statistic__element--header">
+            Visti Signups <span class="element--1">234</span>
+          </h3>
+        </div>
+        <div class="statistic__element--2 statistic__element">
+          <h3 class="statistic__element--header">
+            Net Deposits <span class="element--2">654</span>
+          </h3>
+        </div>
+        <div class="statistic__element--3 statistic__element">
+          <h3 class="statistic__element--header">
+            FTD <span class="element--3">652</span>
+          </h3>
+        </div>
+        <div class="statistic__element--4 statistic__element">
+          <h3 class="statistic__element--header">
+            Turn over  <span class="element--4">785</span>
+          </h3>
+        </div>
+      </div><!--end grid-->
+    </section><!--end statistics-->
+    <section class="graph">
+      graph img
+    </section><!--end graph-->
+  </div>
+  </script>
+
+  <script id="template-main-link" type="text/x-handlebars-template">
     <div class="container">
-      <div class="title">
-        <h2 class="title__header">
-          General Statistic
-        </h2>
-      </div><!--end title-->
-      <section class="calendar">
-        <div class="calendar__pick">
-          <div class="calendar__pick--container">
-            <span class="date--fr">
-              26.08.2019
-            </span>
-            <span class="date--to">
-              26.08.2019 
-            </span>
-            <span class="icon__item icon-calendar"></span>
-          </div>
-        </div><!--end pick-->
-        <!-- <div class="calendar__pick--button"> -->
-          <button class="calendar__button btn"><span class="icon__item icon-refresh"></span></button>
-        <!-- </div> -->
-      </section><!--end calnedar-->
-      <section class="statistic">
-        <div class="grid">
-          <div class="statistic__element--1 statistic__element">
-            <h3 class="statistic__element--header">
-              Visti Signups <span class="element--1">234</span>
-            </h3>
-          </div>
-          <div class="statistic__element--2 statistic__element">
-            <h3 class="statistic__element--header">
-              Net Deposits <span class="element--2">654</span>
-            </h3>
-          </div>
-          <div class="statistic__element--3 statistic__element">
-            <h3 class="statistic__element--header">
-              FTD <span class="element--3">652</span>
-            </h3>
-          </div>
-          <div class="statistic__element--4 statistic__element">
-            <h3 class="statistic__element--header">
-              Turn over  <span class="element--4">785</span>
-            </h3>
-          </div>
-        </div><!--end grid-->
-      </section><!--end statistics-->
-      <section class="graph">
-        graph img
-      </section><!--end graph-->
       <div class="title">
         <h2 class="title__header">
           Links
@@ -209,67 +229,70 @@
         <button class="btn button--add">
           add +
         </button>
-      </section><!--end link-->
-      <div class="title">
-          <h2 class="title__header">
-            banners
-          </h2>
-        </div><!--end title-->
-      <section class="banner">
-        <button class="btn button--add">
-          add +
-        </button>
-        <div class="table banner__table">
-          <table>
-            <tr>
-              <td>
-                <h3>quia</h3>
-              </td>
-              <td><a href="#" class="banner__table--links">link</a></td>
-            </tr>
-            <tr>
-              <td>
-                <h3>quia</h3>
-              </td>
-              <td><a href="#" class="banner__table--links">link2</a></td>
-            </tr>
-            <tr>
-              <td>
-                <h3>quia</h3>
-              </td>
-              <td><a href="#" class="banner__table--links">link3</a></td>
-            </tr>
-            <tr>
-              <td>
-                <h3>quia</h3>
-              </td>
-              <td><a href="#" class="banner__table--links">link4</a></td>
-            </tr>
-            <tr>
-              <td>
-                <h3>quia</h3>
-              </td>
-              <td><a href="#" class="banner__table--links">link5</a></td>
-            </tr>
-            <tr>
-              <td class="last--td">
-                <h3>quia</h3>
-              </td>
-              <td class="last--td">
-                <a href="#" class="banner__table--links">link6</a>
-              </td>
-            </tr>
-          </table>
-        </div><!--end table-->
-        <button class="btn button--add">
-          add +
-        </button>
-        </section><!--end banner-->
-        <form action="" class="personal">
-          personal data form
-        </form>
-    </div><!--end container-->
-  </div><!--end flex-->
+      </section>
+    </div>
+  </script>
+
+  <script id="template-main-banner" type="text/x-handlebars-template">
+    <div class="title">
+        <h2 class="title__header">
+          banners
+        </h2>
+      </div><!--end title-->
+    <section class="banner">
+      <button class="btn button--add">
+        add +
+      </button>
+      <div class="table banner__table">
+        <table>
+          <tr>
+            <td>
+              <h3>quia</h3>
+            </td>
+            <td><a href="#" class="banner__table--links">link</a></td>
+          </tr>
+          <tr>
+            <td>
+              <h3>quia</h3>
+            </td>
+            <td><a href="#" class="banner__table--links">link2</a></td>
+          </tr>
+          <tr>
+            <td>
+              <h3>quia</h3>
+            </td>
+            <td><a href="#" class="banner__table--links">link3</a></td>
+          </tr>
+          <tr>
+            <td>
+              <h3>quia</h3>
+            </td>
+            <td><a href="#" class="banner__table--links">link4</a></td>
+          </tr>
+          <tr>
+            <td>
+              <h3>quia</h3>
+            </td>
+            <td><a href="#" class="banner__table--links">link5</a></td>
+          </tr>
+          <tr>
+            <td class="last--td">
+              <h3>quia</h3>
+            </td>
+            <td class="last--td">
+              <a href="#" class="banner__table--links">link6</a>
+            </td>
+          </tr>
+        </table>
+      </div><!--end table-->
+      <button class="btn button--add">
+        add +
+      </button>
+    </section><!--end banner-->
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
   <script src="js/script.js"></script>
+  <!-- <script src="js/app.js"></script> -->
 </body>
 </html>

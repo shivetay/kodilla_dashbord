@@ -43,3 +43,21 @@
     width: 100%;
   }
 }
+
+#pages {
+  > * {
+    display: none;
+  }
+
+  > .active {
+    display: block;
+  }
+}
+
+#pages,
+#general,
+#links {
+  
+  @include wraper-positions;
+ 
+}
