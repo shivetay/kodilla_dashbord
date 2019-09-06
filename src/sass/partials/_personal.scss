@@ -1,0 +1,41 @@
+.personal{
+  @include segment-color;
+  @include flex-position;
+
+  &__data{
+    &--label{
+      flex: 1;
+      padding: .5rem;
+    }
+
+    &--input{
+      flex: 2;
+      padding: 1rem;
+      margin: 1rem 0;
+    }
+  }
+
+  &__data,
+  &__koms,
+  &__wallet,
+  &__password{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+    margin: 3rem 0;
+    @include border-bottom;
+  }
+
+  .input--wraper{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0 auto;
+    width: 60rem;
+  }
+
+  .input--wraper:last-child{
+    margin-bottom: 2rem;
+  }
+}

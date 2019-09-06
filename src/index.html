@@ -233,7 +233,7 @@
     </div>
   </script>
 
-  <script id="template-main-banner" type="text/x-handlebars-template">
+<script id="template-main-banner" type="text/x-handlebars-template">
   <div class="container">
     <div class="title">
         <h2 class="title__header">
@@ -291,11 +291,73 @@
       </button>
     </div>
   </section><!--end banner-->
-  </script>
+</script>
+
+<script id="template-main-personal" type="text/x-handlebars-template">
+  <div class="container">
+    <div class="title">
+      <h2 class="title__header">
+        Personal Data
+      </h2>
+    </div><!--end title-->
+    <form class="personal">
+      <div class="personal__data">
+        <div class="input--wraper">
+          <label for="name" class="personal__data--label">Name</label>
+          <input type="text" name="user-name" id="name" class="personal__data--input">
+        </div>
+        <div class="input--wraper">
+          <label for="surname" class="personal__data--label">Surname</label>
+          <input type="text" name="user-surname" id="surname" class="personal__data--input">
+        </div>
+        <div class="input--wraper">
+          <label for="mail" class="personal__data--label">E-mail</label>
+          <input type="email" name="user-mail" id="mail" class="personal__data--input">
+        </div>
+        <div class="input--wraper">
+          <label for="phone" class="personal__data--label">Phone</label>
+          <input type="number" name="user-phone" id="phone" class="personal__data--input">
+        </div>
+      </div><!--end prsonal data-->
+      <div class="personal__koms">
+        <div class="input--wraper">
+          <label for="skype" class="personal__data--label">skype</label>
+          <input type="text" name="user-skype" id="skype" class="personal__data--input">
+        </div>
+        <div class="input--wraper">
+          <label for="icq" class="personal__data--label">icq</label>
+          <input type="text" name="user-icq" id="icq" class="personal__data--input">
+        </div>
+        <div class="input--wraper">
+          <label for="msn" class="personal__data--label">msn</label>
+          <input type="email" name="user-msn" id="msn" class="personal__data--input">
+        </div>
+      </div><!--end koms-->
+      <div class="personal__wallet">
+        <div class="input--wraper">
+          <label for="wallet" class="personal__data--label">wallet</label>
+          <input type="text" name="user-wallet" id="wallet" class="personal__data--input">
+        </div>
+      </div><!--end wallet-->
+      <div class="personal__password">
+          <div class="input--wraper">
+            <label for="password" class="personal__data--label">password</label>
+            <input type="text" name="user-password" id="password" class="personal__data--input">
+          </div>
+        <div class="input--wraper">
+          <label for="repeat" class="personal__data--label">repeat</label>
+          <input type="text" name="user-repeat" id="repeat" class="personal__data--input">
+        </div>
+      </div><!--end password-->
+      <button class="btn">save</button>
+    </form>
+  </div>
+</script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
   <script src="js/script.js"></script>
+  <script src="vendor/chart.js"></script>
   <!-- <script src="js/app.js"></script> -->
 </body>
 </html>

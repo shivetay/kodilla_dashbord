@@ -1,4 +1,4 @@
-/* global Handlebars, Chart*/
+/* global Handlebars */
 
 
 /* classes */
@@ -28,8 +28,9 @@ const select = {
 
 const templates = {
 	generalTab: Handlebars.compile(document.querySelector(select.wraperOf.general).innerHTML),
-  linkTab: Handlebars.compile(document.querySelector(select.wraperOf.link).innerHTML),
+  linksTab: Handlebars.compile(document.querySelector(select.wraperOf.link).innerHTML),
   bannerTab: Handlebars.compile(document.querySelector(select.wraperOf.banner).innerHTML),
+  personalTab: Handlebars.compile(document.querySelector(select.wraperOf.personal).innerHTML),
 };
 
 const utils = {}; // eslint-disable-line no-unused-vars
@@ -56,7 +57,6 @@ const inputCheck = document.querySelector(select.htmlItems.toggler);
 			document.querySelector(select.htmlItems.navUl).classList.remove(select.classesNames.visible);
 		}
 	});
-
 
 
 	const app = {
@@ -136,37 +136,13 @@ const inputCheck = document.querySelector(select.htmlItems.toggler);
         for(let templatePage of allTemplatesObj) {
           if(templatePage.classList.contains('active')){
             const classId = templatePage.getAttribute('id');
-            if(classId === 'general'){
-
-              const generateHTML = templates.generalTab();
-              const changeToHtml = utils.createDOMFromHTML(generateHTML);
-              const generalContainer = document.querySelector(select.pages.general);
-              generalContainer.appendChild(changeToHtml);
-
-            } else if (classId === 'links'){
-              /* generate html */
-              const generateHTML = templates.linkTab();
-             	// console.log(generateHTML, 'generate html');
-            
-            	const changeToHtml = utils.createDOMFromHTML(generateHTML);
-            
-             	/*insert to dom */
-              const linkContainer = document.querySelector(select.pages.links);
-                
-              linkContainer.appendChild(changeToHtml);
-            } else if(classId === 'banner'){
-              /* generate html */
-              const generateHTML = templates.bannerTab();
-
-              const changeToHtml = utils.createDOMFromHTML(generateHTML);
-
-              /*insert to dom */
-              const linkContainer = document.querySelector(select.pages.banner);
-                
-              linkContainer.appendChild(changeToHtml);
-            } else{
-
-            }
+            console.log('clasId', classId);
+             const generateHTML = templates[`${classId}Tab`](); 
+             //generalTab()
+              
+              const generalContainer = document.querySelector(`#${classId}`);
+              //inner html
+              generalContainer.innerHTML = generateHTML;
           }
         }
 			},
@@ -182,43 +158,5 @@ const inputCheck = document.querySelector(select.htmlItems.toggler);
 	};
 	
   app.init();
-  
 
-/* canvas */
-
-var canvas = document.getElementById('myChart');
-var ctx = canvas.getContext('2d');
-
-var chart = new Chart(ctx, { // eslint-disable-line no-unused-vars
-  // 1
-  type: 'bar',
-  data: {
-      // 2
-      labels: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10'],
-      // 3
-      datasets: [{
-          // 4
-          label: 'Signups',
-          // 5
-          backgroundColor: '#8DBEC8',
-          borderColor: '#8DBEC8',
-          // 6
-          data: [ 52, 51, 41, 94, 26, 6, 72, 9, 21, 88 ],
-      },
-      {
-          label: 'FTD',
-          backgroundColor: '#F29E4E',
-          borderColor: '#F29E4E',
-          data: [ 6, 72, 1, 0, 47, 11, 50, 44, 63, 76 ],
-      },
-      {
-          label: 'Earned',
-          backgroundColor: '#71B374',
-          borderColor: '#71B374',
-          data: [ 59, 49, 68, 90, 67, 41, 13, 38, 48, 48 ],
-          // 7
-          hidden: true,
-      }]
-  },
-}); 
 

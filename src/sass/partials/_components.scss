@@ -58,3 +58,22 @@ tr{
   transition: all .4s cubic-bezier(1, .22, .29, 1);
 }
 
+input{
+  // width: 10%;
+  padding: .8rem;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid $header-color-grey;
+  background: $color-font-light-second;
+  box-shadow: none;
+}
+
+
+label{
+  font-family: $paragraph-font;
+  font-size: $page-header-font-size;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: $header-color-grey;
+}
+
