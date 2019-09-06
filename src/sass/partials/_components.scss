@@ -59,13 +59,21 @@ tr{
 }
 
 input{
-  // width: 10%;
+  width: 10%;
   padding: .8rem;
   border-radius: 5px;
   outline: none;
   border: 1px solid $header-color-grey;
   background: $color-font-light-second;
   box-shadow: none;
+
+  @include respond(tab-land) {
+    width: 8%;
+  }
+
+  @include respond(phone) {
+    width: 5%;
+  }
 }
 
 

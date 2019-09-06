@@ -12,6 +12,10 @@
       flex: 2;
       padding: 1rem;
       margin: 1rem 0;
+
+      @include respond(phone) {
+       width: 100%;
+      }
     }
   }
 
@@ -33,6 +37,22 @@
     align-items: center;
     margin: 0 auto;
     width: 60rem;
+
+    @include respond(tab-land) {
+      width: 80%;
+    }
+
+    @include respond(tab-port) {
+      width: 65%;
+    }
+
+    @include respond(phone) {
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: stretch;
+      justify-content: center;
+      margin-left: 5rem;
+    }
   }
 
   .input--wraper:last-child{
