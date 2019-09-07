@@ -1,4 +1,5 @@
 import {templates, select} from './settings.js';
+import Form from './components/Form.js';
 
 
 /* hamburger */
@@ -58,7 +59,6 @@ const inputCheck = document.querySelector(select.htmlItems.toggler);
 					/* change urls hash */
 					window.location.hash = '#' + id;
 
-					thisApp.validateForm();
 				});
 			}
 		},
@@ -93,7 +93,7 @@ const inputCheck = document.querySelector(select.htmlItems.toggler);
 				}
 			}
 		},
-
+/*
 		validateForm: function() {
 		
 			const buttonSave = document.querySelector(select.htmlItems.btnSave);
@@ -113,6 +113,17 @@ const inputCheck = document.querySelector(select.htmlItems.toggler);
 			});
 		},
 
+*/
+		initForm: function() {
+			const	thisApp = this;
+			const formContainer = document.querySelector(select.pages.personal);
+			thisApp.from = new Form(formContainer);
+		},
+
+		initChart: function() {
+			const thisApp = this;
+			const chartContainer = document.querySelector('#myChart');
+		},
 
 		init: function() {
 			
@@ -120,6 +131,7 @@ const inputCheck = document.querySelector(select.htmlItems.toggler);
 			
 			// this.initTemplates();
 			this.initPages();
+			this.initForm();
 		}
 	};
 

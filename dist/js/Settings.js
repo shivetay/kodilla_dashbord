@@ -10,7 +10,8 @@ export const select = {
 	pages: {
 		general: '#general',
     links: '#links',
-    banner: '#banner',
+		banner: '#banner',
+		personal: '#personal',
 	},
 	htmlItems: {
 		navUl: '.navigation__item ul',
@@ -23,6 +24,18 @@ export const select = {
 	classesNames: {
 		visible: 'visible',
 	},
+	formItems: {
+		name: '#name',
+		surname: '#surname',
+		mail: '#mail',
+		phone: '#phone',
+		skype: '#skype',
+		icq: '#icq',
+		msn: '#msn',
+		wallet: '#wallet',
+		password: '#password',
+		repeat: '#repeat',
+	}
 };
 
 export const templates = {
