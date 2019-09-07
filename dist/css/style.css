@@ -422,12 +422,23 @@ template {
   font-family: "Roboto", sans-serif;
 }
 
-.button--add {
+.button--add,
+.button--save {
   align-self: center;
   padding: 1rem 2rem;
   margin: 2rem 0;
   font-size: 1.6rem;
   font-family: "Roboto", sans-serif;
+}
+
+@media (max-width: 40em) {
+  .button--save {
+    margin: 2rem 0 2rem -6rem;
+  }
+}
+
+.icon__item {
+  padding: 0 1rem;
 }
 
 .table {
@@ -483,6 +494,10 @@ input {
   border: 1px solid #979797;
   background: #f5f5f2;
   box-shadow: none;
+  transition: all .4s;
+  color: #689abe;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.4rem;
 }
 
 @media (max-width: 56em) {
@@ -495,6 +510,10 @@ input {
   input {
     width: 5%;
   }
+}
+
+input:focus {
+  background-color: #333333;
 }
 
 label {
@@ -1087,6 +1106,9 @@ h4 {
 .personal {
   background: #f5f5f2;
   flex: 1 1 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .personal__data--label {

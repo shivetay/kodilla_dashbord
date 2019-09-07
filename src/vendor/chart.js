@@ -1,4 +1,4 @@
-/* canvas */
+
 
 const canvas = document.getElementById('myChart');
 const ctx = canvas.getContext('2d');

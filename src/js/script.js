@@ -1,46 +1,4 @@
-/* global Handlebars */
-
-
-/* classes */
-
-const select = {
-	wraperOf: {
-		general: '#template-main-general',
-    link: '#template-main-link',
-    banner: '#template-main-banner',
-    personal: '#template-main-personal',
-	},
-	pages: {
-		general: '#general',
-    links: '#links',
-    banner: '#banner',
-	},
-	htmlItems: {
-		navUl: '.navigation__item ul',
-    toggler: '.navigation__hamburger--toggler',
-    navItem: '.navigation__item a',
-    allPages: '.template',
-	},
-	classesNames: {
-		visible: 'visible',
-	},
-};
-
-const templates = {
-	generalTab: Handlebars.compile(document.querySelector(select.wraperOf.general).innerHTML),
-  linksTab: Handlebars.compile(document.querySelector(select.wraperOf.link).innerHTML),
-  bannerTab: Handlebars.compile(document.querySelector(select.wraperOf.banner).innerHTML),
-  personalTab: Handlebars.compile(document.querySelector(select.wraperOf.personal).innerHTML),
-};
-
-const utils = {}; // eslint-disable-line no-unused-vars
-
-
-utils.createDOMFromHTML = function(htmlString) {
-  let div = document.createElement('div');
-  div.innerHTML = htmlString.trim();
-  return div.firstChild;
-};
+import {templates, select} from './settings.js';
 
 
 /* hamburger */
@@ -57,7 +15,6 @@ const inputCheck = document.querySelector(select.htmlItems.toggler);
 			document.querySelector(select.htmlItems.navUl).classList.remove(select.classesNames.visible);
 		}
 	});
-
 
 	const app = {
 		initPages: function(){
@@ -100,6 +57,8 @@ const inputCheck = document.querySelector(select.htmlItems.toggler);
 					
 					/* change urls hash */
 					window.location.hash = '#' + id;
+
+					thisApp.validateForm();
 				});
 			}
 		},
@@ -115,48 +74,53 @@ const inputCheck = document.querySelector(select.htmlItems.toggler);
 			/* add class active to matching links and remove active */
 			for(let link of thisApp.navLinks){
 				link.classList.toggle('active', link.getAttribute('href') === '#' + pageId);
-
-				// if(pageId === 'home'){
-				// 	link.classList.add(
-				// 		classNames.helper.hide
-				// 	);
-				// } else {
-				// 	link.classList.remove(
-				// 		classNames.helper.hide
-				// 	);
-        }
+      }
         
-        const allTemplates = document.querySelectorAll(select.htmlItems.allPages); // eslint-disable-line no-unused-vars
-        // const allTemplates = document.getAttribute('id');
-        // console.log(allTemplates);
+			const allTemplates = document.querySelectorAll(select.htmlItems.allPages); // eslint-disable-line no-unused-vars
 
-        const allTemplatesObj = Array.from(allTemplates);
-        console.log(allTemplatesObj);
-    
-        for(let templatePage of allTemplatesObj) {
-          if(templatePage.classList.contains('active')){
-            const classId = templatePage.getAttribute('id');
-            console.log('clasId', classId);
-             const generateHTML = templates[`${classId}Tab`](); 
-             //generalTab()
-              
-              const generalContainer = document.querySelector(`#${classId}`);
-              //inner html
-              generalContainer.innerHTML = generateHTML;
-          }
-        }
-			},
+			const allTemplatesObj = Array.from(allTemplates);
+	
+			for(let templatePage of allTemplatesObj) {
+				if(templatePage.classList.contains('active')){
+					const classId = templatePage.getAttribute('id');
+
+						const generateHTML = templates[`${classId}Tab`](); 
+						//generalTab()
+						
+						const generalContainer = document.querySelector(`#${classId}`);
+						//inner html
+						generalContainer.innerHTML = generateHTML;
+				}
+			}
+		},
+
+		validateForm: function() {
+		
+			const buttonSave = document.querySelector(select.htmlItems.btnSave);
+
+			buttonSave.addEventListener('click', function(e){
+				e.preventDefault();
+
+				const formArr = document.querySelectorAll(select.htmlItems.formRerquaierd);
+
+				for(let i = 0; i < formArr.length; i++){
+					if(formArr[i].value === ''){
+						console.log('puste');
+					} else{
+						console.log('pełne');
+					}
+				}
+			});
+		},
+
 
 		init: function() {
 			
 			console.log('*** App starting ***');
 			
 			// this.initTemplates();
-      this.initPages();
-
+			this.initPages();
 		}
 	};
-	
-  app.init();
 
-
+	app.init();

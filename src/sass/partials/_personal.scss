@@ -1,6 +1,9 @@
 .personal{
   @include segment-color;
   @include flex-position;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 
   &__data{
     &--label{
@@ -14,7 +17,7 @@
       margin: 1rem 0;
 
       @include respond(phone) {
-       width: 100%;
+        width: 100%;
       }
     }
   }
