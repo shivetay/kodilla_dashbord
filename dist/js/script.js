@@ -75,54 +75,21 @@ const inputCheck = document.querySelector(select.htmlItems.toggler);
 			for(let link of thisApp.navLinks){
 				link.classList.toggle('active', link.getAttribute('href') === '#' + pageId);
       }
-        
-			const allTemplates = document.querySelectorAll(select.htmlItems.allPages); // eslint-disable-line no-unused-vars
 
-			const allTemplatesObj = Array.from(allTemplates);
-	
-			for(let templatePage of allTemplatesObj) {
-				if(templatePage.classList.contains('active')){
-					const classId = templatePage.getAttribute('id');
+      const generalTemplate = document.querySelector(select.pages.general);
 
-						const generateHTML = templates[`${classId}Tab`](); 
-						//generalTab()
-						
-						const generalContainer = document.querySelector(`#${classId}`);
-						//inner html
-						generalContainer.innerHTML = generateHTML;
-				}
-			}
-		},
-/*
-		validateForm: function() {
-		
-			const buttonSave = document.querySelector(select.htmlItems.btnSave);
-
-			buttonSave.addEventListener('click', function(e){
-				e.preventDefault();
-
-				const formArr = document.querySelectorAll(select.htmlItems.formRerquaierd);
-
-				for(let i = 0; i < formArr.length; i++){
-					if(formArr[i].value === ''){
-						console.log('puste');
-					} else{
-						console.log('pełne');
-					}
-				}
-			});
+      const getId = generalTemplate.getAttribute('id');
+      if(getId === pageId && generalTemplate.classList.contains('active')){
+        const generateHTML = templates.generalTab();
+        const generalContainer = generalTemplate;
+        generalContainer.innerHTML = generateHTML;
+      }
 		},
 
-*/
 		initForm: function() {
 			const	thisApp = this;
 			const formContainer = document.querySelector(select.pages.personal);
 			thisApp.from = new Form(formContainer);
-		},
-
-		initChart: function() {
-			const thisApp = this;
-			const chartContainer = document.querySelector('#myChart');
 		},
 
 		init: function() {
@@ -130,7 +97,8 @@ const inputCheck = document.querySelector(select.htmlItems.toggler);
 			console.log('*** App starting ***');
 			
 			// this.initTemplates();
-			this.initPages();
+      this.initPages();
+      
 			this.initForm();
 		}
 	};

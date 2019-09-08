@@ -59,4 +59,20 @@
       font-size: $small-link-font-size;
     }
   }
+
+  .icon-notification{
+    position: relative;
+
+    &::after{
+      position: absolute;
+      height: .7rem;
+      width: .7rem;
+      border-radius: 50%;
+      content: " ";
+      display: block;
+      background: $button-color-orange;
+      top: -.3rem;
+      left: 1.8rem;
+    }
+  }
 }

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400%7CPTRoboto:300,400,700%7CP&Indie+Flower&display=swap" rel="stylesheet"> 
     <title>Dashboard</title>
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
 <body>
   <div class="flex">
@@ -181,7 +181,9 @@
                 <h3>quia</h3>
               </td>
               <td>
-                <a href="#" class="link__table--links">link</a>
+                <a href="#" class="link__table--links">link</a> 
+                <span class="icon__item icon__item--tr icon-links"></span>
+                <span class="icon__item icon__item--tr icon-trash"></span>
               </td>
             </tr>
             <tr>
@@ -190,6 +192,8 @@
               </td>
               <td>
                 <a href="#" class="link__table--links">link2</a>
+                <span class="icon__item icon__item--tr icon-links"></span>
+                <span class="icon__item icon__item--tr icon-trash"></span>
               </td>
             </tr>
             <tr>
@@ -198,6 +202,8 @@
               </td>
               <td>
                 <a href="#" class="link__table--links">link3</a>
+                <span class="icon__item icon__item--tr icon-links"></span>
+                <span class="icon__item icon__item--tr icon-trash"></span>
               </td>
             </tr>
             <tr>
@@ -206,6 +212,8 @@
               </td>
               <td>
                 <a href="#" class="link__table--links">link4</a>
+                <span class="icon__item icon__item--tr icon-links"></span>
+                <span class="icon__item icon__item--tr icon-trash"></span>
               </td>
             </tr>
             <tr>
@@ -214,6 +222,8 @@
               </td>
               <td>
                 <a href="#" class="link__table--links">link5</a>
+                <span class="icon__item icon__item--tr icon-links"></span>
+                <span class="icon__item icon__item--tr icon-trash"></span>
               </td>
             </tr>
             <tr>
@@ -222,6 +232,8 @@
               </td>
               <td class="last--td">
                 <a href="#" class="link__table--links">link6</a>
+                <span class="icon__item icon__item--tr icon-links"></span>
+                <span class="icon__item icon__item--tr icon-trash"></span>
               </td>
             </tr>
           </table>
@@ -250,31 +262,46 @@
             <td>
               <h3>quia</h3>
             </td>
-            <td><a href="#" class="banner__table--links">link</a></td>
+            <td><a href="#" class="banner__table--links">link</a>
+              <span class="icon__item icon__item--tr icon-links"></span>
+              <span class="icon__item icon__item--tr icon-trash"></span>
+            </td>
           </tr>
           <tr>
             <td>
               <h3>quia</h3>
             </td>
-            <td><a href="#" class="banner__table--links">link2</a></td>
+            <td><a href="#" class="banner__table--links">link2</a>
+              <span class="icon__item icon__item--tr icon-links"></span>
+              <span class="icon__item icon__item--tr icon-trash"></span>
+            </td>
           </tr>
           <tr>
             <td>
               <h3>quia</h3>
             </td>
-            <td><a href="#" class="banner__table--links">link3</a></td>
+            <td><a href="#" class="banner__table--links">link3</a>
+              <span class="icon__item icon__item--tr icon-links"></span>
+              <span class="icon__item icon__item--tr icon-trash"></span>
+            </td>
           </tr>
           <tr>
             <td>
               <h3>quia</h3>
             </td>
-            <td><a href="#" class="banner__table--links">link4</a></td>
+            <td><a href="#" class="banner__table--links">link4</a>
+              <span class="icon__item icon__item--tr icon-links"></span>
+              <span class="icon__item icon__item--tr icon-trash"></span>
+            </td>
           </tr>
           <tr>
             <td>
               <h3>quia</h3>
             </td>
-            <td><a href="#" class="banner__table--links">link5</a></td>
+            <td><a href="#" class="banner__table--links">link5</a>
+              <span class="icon__item icon__item--tr icon-links"></span>
+              <span class="icon__item icon__item--tr icon-trash"></span>
+            </td>
           </tr>
           <tr>
             <td class="last--td">
@@ -282,6 +309,8 @@
             </td>
             <td class="last--td">
               <a href="#" class="banner__table--links">link6</a>
+                <span class="icon__item icon__item--tr icon-links"></span>
+                <span class="icon__item icon__item--tr icon-trash"></span>
             </td>
           </tr>
         </table>
@@ -304,15 +333,15 @@
       <div class="personal__data">
         <div class="input--wraper">
           <label for="name" class="personal__data--label">Name</label>
-          <input type="text" name="user-name" id="name" class="personal__data--input req" requierd>
+          <input type="text" name="user-name" id="name" class="personal__data--input req" required>
         </div>
         <div class="input--wraper">
           <label for="surname" class="personal__data--label">Surname</label>
-          <input type="text" name="user-surname" id="surname" class="personal__data--input req" requierd>
+          <input type="text" name="user-surname" id="surname" class="personal__data--input req" required>
         </div>
         <div class="input--wraper">
           <label for="mail" class="personal__data--label">E-mail</label>
-          <input type="email" name="user-mail" id="mail" class="personal__data--input req" requierd>
+          <input type="email" name="user-mail" id="mail" class="personal__data--input req" required>
         </div>
         <div class="input--wraper">
           <label for="phone" class="personal__data--label">Phone</label>
@@ -342,21 +371,21 @@
       <div class="personal__password">
           <div class="input--wraper">
             <label for="password" class="personal__data--label">password</label>
-            <input type="text" name="user-password" id="password" class="personal__data--input req" requierd>
+            <input type="text" name="user-password" id="password" class="personal__data--input req" required>
           </div>
         <div class="input--wraper">
           <label for="repeat" class="personal__data--label">repeat</label>
-          <input type="text" name="user-repeat" id="repeat" class="personal__data--input req" requierd>
+          <input type="text" name="user-repeat" id="repeat" class="personal__data--input req" required>
         </div>
       </div><!--end password-->
-      <button class="btn button--save">save</button>
+      <button type="submit" id="save" class="btn button--save">save</button>
     </form>
   </div>
 </script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
-  <script src="js/script.js" type="module"></script>
+  <script src="./js/script.js" type="module"></script>
   <!-- <script src="vendor/chart.js"></script> -->
   <!-- <script src="js/app.js"></script> -->
 </body>

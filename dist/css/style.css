@@ -420,6 +420,11 @@ template {
   cursor: pointer;
   font-size: 1.4rem;
   font-family: "Roboto", sans-serif;
+  transition: all .4s;
+}
+
+.btn:hover {
+  background-color: #ffa200;
 }
 
 .button--add,
@@ -441,6 +446,16 @@ template {
 
 .icon__item {
   padding: 0 1rem;
+}
+
+.icon__item--tr {
+  color: inherit;
+  font-size: 1.4rem;
+  text-align: right;
+}
+
+.icon__item--tr:first-of-type {
+  margin-left: 10rem;
 }
 
 .table {
@@ -519,6 +534,14 @@ input {
 
 input:focus {
   background-color: #333333;
+}
+
+input:invalid {
+  border: 1px solid #ff0000;
+}
+
+input:valid {
+  border: 1px solid #04ae00;
 }
 
 label {
@@ -887,6 +910,8 @@ h4 {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50%;
+  border: 2px solid #04ae00;
+  padding: 2px;
 }
 
 .navigation__user--name {
@@ -994,6 +1019,22 @@ h4 {
 .user-panel__user span {
   color: #689abe;
   font-size: 1.3rem;
+}
+
+.user-panel .icon-notification {
+  position: relative;
+}
+
+.user-panel .icon-notification::after {
+  position: absolute;
+  height: .7rem;
+  width: .7rem;
+  border-radius: 50%;
+  content: " ";
+  display: block;
+  background: #f58220;
+  top: -.3rem;
+  left: 1.8rem;
 }
 
 .title {

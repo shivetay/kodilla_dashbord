@@ -85,7 +85,6 @@
       display: flex;
       margin-left: 1rem;
     }
-
   }
 
   .hamburger > div{
@@ -102,10 +101,6 @@
     margin-top: -1rem;
     transition: all .4s ease;
   }
-
-  // .navigation__hamburger--toggler:checked + .hamburger > div{
-  //   transform: rotate (135deg);
-  // }
 
   /* show lines top bottom */
   .hamburger > div::after,
@@ -127,8 +122,6 @@
       top: -7px;
     }
   }
-
-  
 
   /* links tab */
 
@@ -207,6 +200,8 @@
         height: 25%;
         object-fit: cover;
         border-radius: 50%;
+        border: 2px solid $color-green;
+        padding: 2px;
       }
     }
 

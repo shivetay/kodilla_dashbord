@@ -35,7 +35,12 @@ export const select = {
 		wallet: '#wallet',
 		password: '#password',
 		repeat: '#repeat',
-	}
+	},
+/* add local db */
+	db: {
+		url: '//localhost:3131',
+		form: 'users',
+	},
 };
 
 export const templates = {

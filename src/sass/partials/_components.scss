@@ -6,6 +6,9 @@
   cursor: pointer;
   font-size: $paragraph-font-size;
   font-family: $brand-font;
+  transition: all .4s;
+
+  &:hover{background-color: $button-color-hover;}
 }
 
 .button--add,
@@ -24,6 +27,14 @@
 }
 
 .icon__item{padding: 0 1rem;}
+
+.icon__item--tr{
+  color: inherit;
+  font-size: $paragraph-font-size;
+  text-align: right;
+}
+
+.icon__item--tr:first-of-type{margin-left: 10rem;}
 
 .table{
   align-self: center;
@@ -89,6 +100,10 @@ input{
   }
 
   &:focus{background-color: $color-dark-main;}
+
+  &:invalid{border: 1px solid $brand-main-color;}
+
+  &:valid{border: 1px solid $color-green;}
 }
 
 
