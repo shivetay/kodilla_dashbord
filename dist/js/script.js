@@ -1,5 +1,7 @@
 import {templates, select} from './settings.js';
 import Form from './components/Form.js';
+import Link from './components/Links.js';
+
 
 
 /* hamburger */
@@ -23,23 +25,19 @@ const inputCheck = document.querySelector(select.htmlItems.toggler);
 			const thisApp = this;
 	
 			/*select children of id="pages" */
-			thisApp.pages = document.querySelector('#pages').children;
-			// console.log('children', thisApp.pages);
+			thisApp.pages = document.querySelector(select.pages.allPages).children;
 	
 			/*get all links from nav */
 			thisApp.navLinks = document.querySelectorAll(select.htmlItems.navItem);
-			// console.log('links', thisApp.navLinks);
 	
 			/* page activation method */
 			const idFromHash = window.location.hash.replace('#/','');
 	
 			let pageMatchingHash = thisApp.pages[0].id;
-			// console.log('matching hash', pageMatchingHash);
 	
 			for(let page of thisApp.pages) {
 				if(page.id === idFromHash) {
 					pageMatchingHash = page.id;
-					// console.log('matching hash 2', pageMatchingHash);
 					break;
 				}
 			}
@@ -82,24 +80,70 @@ const inputCheck = document.querySelector(select.htmlItems.toggler);
       if(getId === pageId && generalTemplate.classList.contains('active')){
         const generateHTML = templates.generalTab();
         const generalContainer = generalTemplate;
-        generalContainer.innerHTML = generateHTML;
-      }
+				generalContainer.innerHTML = generateHTML;
+				thisApp.initChart();
+			}
+			
+			thisApp.initLinks();
+		},
+
+		initChart: function() {
+			const canvas = document.getElementById('myChart');
+			const ctx = canvas.getContext('2d');
+
+			const chart = new Chart(ctx, { // eslint-disable-line no-unused-vars
+				// 1
+				type: 'bar',
+				data: {
+					// 2
+					labels: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10'],
+					// 3
+					datasets: [{
+							// 4
+							label: 'Signups',
+							// 5
+							backgroundColor: '#8DBEC8',
+							borderColor: '#8DBEC8',
+							// 6
+							data: [ 52, 51, 41, 94, 26, 6, 72, 9, 21, 88 ],
+					},
+					{
+							label: 'FTD',
+							backgroundColor: '#F29E4E',
+							borderColor: '#F29E4E',
+							data: [ 6, 72, 1, 0, 47, 11, 50, 44, 63, 76 ],
+					},
+					{
+							label: 'Earned',
+							backgroundColor: '#71B374',
+							borderColor: '#71B374',
+							data: [ 59, 49, 68, 90, 67, 41, 13, 38, 48, 48 ],
+							// 7
+							hidden: true,
+					}]
+				},
+			}); 
 		},
 
 		initForm: function() {
 			const	thisApp = this;
 			const formContainer = document.querySelector(select.pages.personal);
-			thisApp.from = new Form(formContainer);
+			thisApp.form = new Form(formContainer);
 		},
+		
+    initLinks: function() {
+      const thisApp = this;
+      const linkContainer = document.querySelector(select.htmlItems.allPages);
+      thisApp.link = new Link(linkContainer);
+    },
 
 		init: function() {
 			
 			console.log('*** App starting ***');
 			
-			// this.initTemplates();
       this.initPages();
-      
 			this.initForm();
+			this.initLinks();
 		}
 	};
 

@@ -21,6 +21,7 @@ class Form {
     thisForm.dom.wrapper = utils.createDOMFromHTML(generateHtml);
 
     const formContainer = document.querySelector(select.pages.personal);
+    console.log('container form', formContainer);
     formContainer.appendChild(thisForm.dom.wrapper);
 
     thisForm.dom.saveBtn = thisForm.dom.wrapper.querySelector(select.htmlItems.btnSave);
@@ -37,6 +38,7 @@ class Form {
     thisForm.dom.repeat = thisForm.dom.wrapper.querySelector(select.formItems.repeat);
   }
   
+  //TODO:
 	validateForm(){
     const thisForm = this;
     
@@ -57,6 +59,7 @@ class Form {
 		});
   }
 
+  // FIXME:
   sendOrder(){
     const thisForm = this;
     const url = select.db.url + '/' + select.db.form;
@@ -80,7 +83,7 @@ class Form {
       headers: {
         'Content-Type': 'application/json',
       },
-      body:JSON.stringify(payload),
+      body: JSON.stringify(payload)
     };
     fetch(url, options)
       .then(function(response){

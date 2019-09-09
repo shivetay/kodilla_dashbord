@@ -153,7 +153,8 @@
         }
 
         &:hover a{color: $color-font-light-second;}
-      }
+
+      } 
     }
 
     &--links{
@@ -166,6 +167,8 @@
       padding: 1rem;
       transition: all .3s;
     }
+
+    .active{color: $button-color-orange;}
   }
 
   /* navigation on phone */

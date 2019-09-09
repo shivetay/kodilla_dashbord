@@ -8,6 +8,7 @@ export const select = {
     personal: '#template-main-personal',
 	},
 	pages: {
+		allPages: '#pages',
 		general: '#general',
     links: '#links',
 		banner: '#banner',
@@ -19,10 +20,12 @@ export const select = {
     navItem: '.navigation__item a',
 		allPages: '.template',
 		btnSave: '.button--save',
+		btnAdd: '.button--add',
 		formRerquaierd: '.personal .req',
 	},
 	classesNames: {
 		visible: 'visible',
+		overlay: 'overlay'
 	},
 	formItems: {
 		name: '#name',

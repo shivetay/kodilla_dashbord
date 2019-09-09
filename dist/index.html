@@ -100,13 +100,13 @@
 
   <!-- handelbar templates -->
   <div id="pages">
-    <section id="general" class="active template">
+    <section id="general" class="active">
     </section>
     <section id="links" class="template">
     </section>
     <section id="banner" class="template">
     </section>
-    <section id="personal" class="template">
+    <section id="personal">
     </section>
   </div>
 
@@ -241,6 +241,22 @@
         <button class="btn button--add">
           add +
         </button>
+        <div id="overaly" class="overaly">
+          <div class="modal" id="myModal">
+            <div class="btn--close js--close-modal">X</div>
+            <form action="" class="modall__form">
+              <div class="input--wraper">
+                <label for="name" class="modal__data--label">Title</label>
+                <input type="text" name="title-modal" id="title" class="modal__data--input req" required>
+              </div>
+              <div class="input--wraper">
+                <label for="link" class="modal--label">Link</label>
+                <input type="text" name="link-modal" id="link" class="modal__data--input req" required>
+              </div>
+            </form>
+            <button class="js--close-modal btn">Add</button>
+          </div>
+        </div>
       </section>
     </div>
   </script>
@@ -318,6 +334,21 @@
       <button class="btn button--add">
         add +
       </button>
+      <div id="overaly" class="overaly">
+        <div class="modal" id="myModal">
+          <div class="btn--close js--close-modal">X</div>
+          <form action="" class="modall__form">
+            <div class="input--wraper">
+              <label for="name" class="modal__data--label">Title</label>
+              <input type="text" name="title-modal" id="title" class="modal__data--input req" required>
+            </div>
+            <div class="input--wraper">
+              <label for="link" class="modal--label">Link</label>
+              <input type="text" name="link-modal" id="link" class="modal__data--input req" required>
+            </div>
+          </form>
+        <button class="js--close-modal btn">Add</button>
+      </div>
     </div>
   </section><!--end banner-->
 </script>
