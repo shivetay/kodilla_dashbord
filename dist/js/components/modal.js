@@ -9,30 +9,30 @@ function closeModal() {
 function overlaySelect() { // eslint-disable-line no-unused-vars
   document.querySelectorAll('#overlay .js--close-modal').forEach(function(btn) {
     btn.addEventListener('click', function(e) {
-      e.preventDefault()
-      closeModal()
+      e.preventDefault();
+      closeModal();
       console.log('klik');
-    })
-  })
+    });
+  });
 
   document.addEventListener('click', function(e) {
     if(e.target === this) {
-      closeModal()
+      closeModal();
     }
-  })
+  });
 
   document.addEventListener('keyup', function(e) {
     if(e.keyCode === 27) {
-      closeModal()
+      closeModal();
     }
-  })
+  });
 }
 
-function openModal(modal) {
+function openModal(modal) { // eslint-disable-line no-unused-vars
   document.querySelectorAll('#overlay > *').forEach(function(modal) {
-    modal.classList.remove('show')
-  })
-  document.querySelector('#overlay').classList.add('show')
-  document.querySelector(modal).classList.add('show')
+    modal.classList.remove('show');
+  });
+  document.querySelector('#overlay').classList.add('show');
+  document.querySelector(modal).classList.add('show');
 }
 

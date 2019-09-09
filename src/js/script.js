@@ -1,8 +1,8 @@
+/* global Chart*/
+
 import {templates, select} from './settings.js';
 import Form from './components/Form.js';
 import Link from './components/Links.js';
-
-
 
 /* hamburger */
 
@@ -91,7 +91,7 @@ const inputCheck = document.querySelector(select.htmlItems.toggler);
 			const canvas = document.getElementById('myChart');
 			const ctx = canvas.getContext('2d');
 
-			const chart = new Chart(ctx, { // eslint-disable-line no-unused-vars
+			const chart = new Chart(ctx, {// eslint-disable-line no-unused-vars
 				// 1
 				type: 'bar',
 				data: {
