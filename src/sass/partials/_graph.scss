@@ -1,0 +1,22 @@
+.graph{
+  @include segment-color;
+  @include flex-position;
+  display: flex;
+  justify-content: center;
+  width: 80vw;
+  margin-bottom: 2rem;
+
+  &__canvas {
+    width: 100%;
+
+    @include respond(desktop) {
+      width: 80%;
+      height: 80%;
+    }
+
+    @include respond(phone) {
+      width: 50%;
+      height: 50%;
+    }
+  }
+}

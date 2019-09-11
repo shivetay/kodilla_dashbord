@@ -1,0 +1,18 @@
+
+*,
+*::before,
+*::after{box-sizing: border-box;}
+
+body{background: $color-font-light;}
+
+html{
+  font-size: 62.5%; /*1rem = 10px 10px/16px=62.5 */
+
+  @include respond(desktop) {
+    font-size: 56%; /* 1rem = 9px 9/16=50% */
+  }
+
+  @include respond(phone) {
+    font-size: 45%; /* 1rem = 7.2px 7.2/16=50% */
+  }
+}

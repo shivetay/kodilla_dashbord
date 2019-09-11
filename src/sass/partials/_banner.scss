@@ -1,0 +1,7 @@
+.banner{
+  @include table-position;
+
+  &__table{
+    align-self: center;
+  }
+}

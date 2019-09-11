@@ -1,0 +1,78 @@
+.user-panel{
+  background: $color-font-light-second;
+  display: flex;
+  justify-content: flex-end;
+  height: 5rem;
+  @include width-calc;
+  @include margin-pos;
+  @include border-bottom;
+  position: sticky;
+  top: 0;
+  
+  @include respond(desktop) {
+    width: 100%;
+  }
+  
+  &__cash,
+  &__notification,
+  &__user,
+  &__logout{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    border-left: 1px solid $header-color-grey-light;
+  }
+
+  &__cash,
+  &__user{
+    padding: 0 5rem;
+
+    @include respond(desktop) {
+      padding: 0 2rem;
+    } 
+  }
+
+  &__notification,
+  &__logout{
+    padding: 0 2rem;
+
+    @include respond(desktop) {
+      padding: 0 1.4rem;
+    } 
+
+    span{
+      font-size: $page-header-font-size;
+      color: $header-color-grey;
+    }
+  }
+
+  &__cash{
+    span{
+      font-size: $page-header-font-size;
+      color: $header-color-grey;
+    }
+  }
+  
+  &__user{
+    span{
+      color: $color-blue;
+      font-size: $small-link-font-size;
+    }
+  }
+
+  .icon-notification{
+    position: relative;
+
+    &::after{
+      position: absolute;
+      height: .7rem;
+      width: .7rem;
+      border-radius: 50%;
+      content: " ";
+      display: block;
+      background: $button-color-orange;
+      top: -.3rem;
+      left: 1.8rem;
+    }
+  }
+}

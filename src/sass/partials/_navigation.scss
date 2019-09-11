@@ -1,0 +1,236 @@
+
+.navigation{
+
+  background: $color-dark-main;
+  height: 100vh;
+  width: 20rem;
+  position: fixed;
+  // flex: 0 0 14%;
+  left: 0;
+  top: 0;
+
+  @include respond(phone) {
+    width: 6rem;
+  }
+
+  /* logo tab */
+
+  &--container{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+
+    .navigation__hamburger--toggler{
+      position: absolute;
+      cursor: pointer;
+      width: 6rem;
+      height: 6rem;
+      left: 0;
+      top: -.5rem;
+      z-index: 5;
+      display: none;
+      opacity: 0;
+
+      @include respond(phone) {
+        display: flex;
+      }
+    }
+
+    /* animation X */
+
+    .navigation__hamburger--toggler:checked + .hamburger > div{
+      transform: rotate(135deg);
+    }
+
+    .navigation__hamburger--toggler:checked + .hamburger > div::before,
+    .navigation__hamburger--toggler:checked + .hamburger > div::after{
+      top: 0;
+      transform: rotate(90deg);
+    }
+  }
+
+  /* logo */
+
+  &__logo{
+    color: $color-font-light-second;
+    font-size: 2.5rem;
+    font-family: $logo-font;
+    font-style: oblique;
+    text-decoration: none;
+    padding: 1rem;
+
+    @include respond(phone) {
+      display: none;
+    }
+  }
+
+  /* hamburger */
+
+  &__hamburger{
+    color: $header-color-grey-light;
+    font-size: 2rem;
+    padding: 1rem;
+  }
+
+  .hamburger{
+    position: absolute;
+    width: 6rem;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+
+    @include respond(phone) {
+      display: flex;
+      margin-left: 1rem;
+    }
+  }
+
+  .hamburger > div{
+    position: relative;
+    flex: none;
+    width: 45%;
+    height: 2px;
+    background: $color-font-light;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: -4rem;
+    top: -1rem;
+    margin-top: -1rem;
+    transition: all .4s ease;
+  }
+
+  /* show lines top bottom */
+  .hamburger > div::after,
+  .hamburger > div::before{
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: -10px;
+    width: 100%;
+    height: 2px;
+    background: inherit;
+  }
+
+  /* line down */
+  .hamburger > div::after{top: 1rem;}
+
+  .hamburger > div::before{
+    @include respond(phone) {
+      top: -7px;
+    }
+  }
+
+  /* links tab */
+
+  &__item{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    ul{
+      @include reomve-list-styling;
+      padding: .5rem 0 1rem 0;
+      @include border-bottom;
+
+      @include respond(phone) {
+        display: none;
+      }
+
+      li{
+        height: 4rem;
+        padding-top: 1rem;
+        transition: all .3s;
+
+        &:last-child{margin-bottom: 1.2rem;}
+
+        &:hover{
+          border-left: 4px solid $button-color-orange;
+          background: $header-color-grey-light;
+        }
+
+        &:hover a{color: $color-font-light-second;}
+
+      } 
+    }
+
+    &--links{
+      text-decoration: none;
+      color: $header-color-grey;
+      font-size: $page-header-font-size;
+      font-family: $brand-font;
+      font-weight: 300;
+      text-transform: capitalize;
+      padding: 1rem;
+      transition: all .3s;
+    }
+
+    .active{color: $button-color-orange;}
+  }
+
+  /* navigation on phone */
+
+  .visible{
+    background: $paragraph-color-opa;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* manager tab */
+  &__user{
+    &--container{
+      display: flex;
+    }
+
+    &--manager{
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+
+      @include respond(phone) {
+        display: none;
+      }
+
+      img{
+        width: 25%;
+        height: 25%;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 2px solid $color-green;
+        padding: 2px;
+      }
+    }
+
+    &--name{
+      align-self: flex-end;
+      font-size: $small-link-font-size;
+      font-family: $paragraph-font;
+      font-weight: 300;
+      color: $color-blue;
+
+      @include respond(phone) {
+        display: none;
+      }
+    }
+
+    &--img{
+      margin: 2rem 2rem 0 2rem;
+    }
+
+    &--header{
+      text-transform: capitalize;
+      margin: 2rem 2rem 0 2rem;
+
+      @include respond(phone) {
+        display: none;
+      }
+    }
+  }
+}

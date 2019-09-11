@@ -1,0 +1,11 @@
+.title{
+  display: flex;
+  align-items: center;
+  @include segment-color;
+  @include flex-position;
+  @include border-bottom;
+  
+  &__header{
+    margin: 1rem 0 1rem 2rem;
+  }
+}
