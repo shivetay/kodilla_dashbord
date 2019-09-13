@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400%7CPTRoboto:300,400,700%7CP&Indie+Flower&display=swap" rel="stylesheet"> 
+    <title>Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+<body>
+  <div class="flex">
+    <nav class="navigation">
+        <div class="navigation--container">
+          <a class="navigation__logo" href="#">
+            Just do it
+          </a> 
+          <div class="navigation__hamburger">
+            <input type="checkbox" class="navigation__hamburger--toggler">
+            <div class="hamburger"><div></div></div>
+          </div>
+        </div>
+        <div class="navigation__item">
+          <ul>
+            <li>
+              <a href="#general" class="navigation__item--links">
+                  <span class="icon__item icon-general"></span>
+              general
+            </a>
+            </li>
+            <li>
+              <a href="#details" class="navigation__item--links">
+                <span class="icon__item icon-details"></span>
+              details
+              </a>
+            </li>
+            <li>
+              <a href="#links" class="navigation__item--links">
+                  <span class="icon__item icon-links"></span>
+                links
+              </a>
+            </li>
+            <li>
+              <a href="#banner" class="navigation__item--links">
+                <span class="icon__item icon-banners"></span>
+                banners
+              </a>
+            </li>
+            <li>
+              <a href="#personal" class="navigation__item--links">
+                  <span class="icon__item icon-links icon-personaldata"></span>
+                personal data
+              </a>
+            </li>
+            <li>
+              <a href="#payouts" class="navigation__item--links">
+                  <span class="icon__item icon-links icon-payout"></span>
+                payouts
+              </a>
+            </li>
+            <li>
+              <a href="#postbacks" class="navigation__item--links">
+                  <span class="icon__item icon-links icon-postback"></span>
+                postbacks
+              </a>
+            </li>
+          </ul><!--end ul-->
+        </div><!--end nav item-->
+          <h3 class="navigation__user--header">
+            Your manager
+          </h3>
+        <div class="navigation__user--conatiner">
+        <div class="navigation__user--manager">
+          <img class="navigation__user--img" src="images/patrick-amoy-RTVqDDfynfo-unsplash.jpg" alt="manager_photo">
+          <h4 class="navigation__user--name">Mikhael E.</h4>
+        </div>
+        </div>
+      </nav><!--end nav-->
+    <section class="user-panel">
+      <div class="user-panel__cash">
+        <span>
+          <span class="icon__item icon-wallet"></span> 
+          15000.00 
+          <span class="icon__item icon-arrow-down-small"></span>
+        </span> 
+      </div>
+      <div class="user-panel__notification">
+        <span class="icon__item icon-notification"></span>
+      </div>
+      <div class="user-panel__user">
+        <span> <span class="icon__item icon-login"></span> 
+        George McFly
+      </span>
+      </div>
+      <div class="user-panel__logout">
+          <span class="icon__item icon-quit"></span>
+      </div>
+    </section><!--user-panel-->
+  </div><!--end flex-->
+
+  <!-- handelbar templates -->
+  <div id="pages">
+    <section id="general" class="active">
+    </section>
+    <section id="links" class="template">
+    </section>
+    <section id="banner" class="template">
+    </section>
+    <section id="personal">
+    </section>
+  </div>
+
+  <script id="template-main-general" type="text/x-handlebars-template">
+  <div class="container">
+    <div class="title">
+      <h2 class="title__header">
+        General Statistic
+      </h2>
+    </div><!--end title-->
+    <section class="calendar">
+      <div class="calendar__pick">
+        <div class="calendar__pick--container">
+          <span class="date--fr">
+            26.08.2019
+          </span>
+          <span class="date--to">
+            26.08.2019 
+          </span>
+          <span class="icon__item icon-calendar"></span>
+        </div>
+      </div><!--end pick-->
+      <!-- <div class="calendar__pick--button"> -->
+        <button class="calendar__button btn"><span class="icon__item icon-refresh"></span></button>
+      <!-- </div> -->
+    </section><!--end calnedar-->
+    <section class="statistic">
+      <div class="grid">
+        <div class="statistic__element--1 statistic__element">
+          <h3 class="statistic__element--header">
+            Visti Signups <span class="element--1">234</span>
+          </h3>
+        </div>
+        <div class="statistic__element--2 statistic__element">
+          <h3 class="statistic__element--header">
+            Net Deposits <span class="element--2">654</span>
+          </h3>
+        </div>
+        <div class="statistic__element--3 statistic__element">
+          <h3 class="statistic__element--header">
+            FTD <span class="element--3">652</span>
+          </h3>
+        </div>
+        <div class="statistic__element--4 statistic__element">
+          <h3 class="statistic__element--header">
+            Turn over  <span class="element--4">785</span>
+          </h3>
+        </div>
+      </div><!--end grid-->
+    </section><!--end statistics-->
+    <section class="graph">
+      <canvas id="myChart" class="graph__canvas"></canvas>
+    </section><!--end graph-->
+  </div><!--end container-->
+  </script>
+
+  <script id="template-main-link" type="text/x-handlebars-template">
+    <div class="container">
+      <div class="title">
+        <h2 class="title__header">
+          Links
+        </h2>
+      </div><!--end title-->
+      <section class="link">
+        <button class="btn button--add">
+          add +
+        </button>
+        <div class="table link__table">
+          <table>
+            <tr>
+              <td>
+                <h3>quia</h3>
+              </td>
+              <td>
+                <a href="#" class="link__table--links">link</a> 
+                <span class="icon__item icon__item--tr icon-links"></span>
+                <span class="icon__item icon__item--tr icon-trash"></span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <h3>sit</h3>
+              </td>
+              <td>
+                <a href="#" class="link__table--links">link2</a>
+                <span class="icon__item icon__item--tr icon-links"></span>
+                <span class="icon__item icon__item--tr icon-trash"></span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <h3>eum</h3>
+              </td>
+              <td>
+                <a href="#" class="link__table--links">link3</a>
+                <span class="icon__item icon__item--tr icon-links"></span>
+                <span class="icon__item icon__item--tr icon-trash"></span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <h3>quia</h3>
+              </td>
+              <td>
+                <a href="#" class="link__table--links">link4</a>
+                <span class="icon__item icon__item--tr icon-links"></span>
+                <span class="icon__item icon__item--tr icon-trash"></span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <h3>quia</h3>
+              </td>
+              <td>
+                <a href="#" class="link__table--links">link5</a>
+                <span class="icon__item icon__item--tr icon-links"></span>
+                <span class="icon__item icon__item--tr icon-trash"></span>
+              </td>
+            </tr>
+            <tr>
+              <td class="last--td">
+                <h3>quia</h3>
+              </td>
+              <td class="last--td">
+                <a href="#" class="link__table--links">link6</a>
+                <span class="icon__item icon__item--tr icon-links"></span>
+                <span class="icon__item icon__item--tr icon-trash"></span>
+              </td>
+            </tr>
+          </table>
+        </div><!--end table-->
+        <button class="btn button--add">
+          add +
+        </button>
+        <div id="overaly" class="overaly">
+          <div class="modal" id="myModal">
+            <div class="btn--close js--close-modal">X</div>
+            <form action="" class="modall__form">
+              <div class="input--wraper">
+                <label for="name" class="modal__data--label">Title</label>
+                <input type="text" name="title-modal" id="title" class="modal__data--input req" required>
+              </div>
+              <div class="input--wraper">
+                <label for="link" class="modal--label">Link</label>
+                <input type="text" name="link-modal" id="link" class="modal__data--input req" required>
+              </div>
+            </form>
+            <button class="js--close-modal btn">Add</button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </script>
+
+<script id="template-main-banner" type="text/x-handlebars-template">
+  <div class="container">
+    <div class="title">
+        <h2 class="title__header">
+          banners
+        </h2>
+      </div><!--end title-->
+    <section class="banner">
+      <button class="btn button--add">
+        add +
+      </button>
+      <div class="table banner__table">
+        <table>
+          <tr>
+            <td>
+              <h3>quia</h3>
+            </td>
+            <td><a href="#" class="banner__table--links">link</a>
+              <span class="icon__item icon__item--tr icon-links"></span>
+              <span class="icon__item icon__item--tr icon-trash"></span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h3>quia</h3>
+            </td>
+            <td><a href="#" class="banner__table--links">link2</a>
+              <span class="icon__item icon__item--tr icon-links"></span>
+              <span class="icon__item icon__item--tr icon-trash"></span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h3>quia</h3>
+            </td>
+            <td><a href="#" class="banner__table--links">link3</a>
+              <span class="icon__item icon__item--tr icon-links"></span>
+              <span class="icon__item icon__item--tr icon-trash"></span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h3>quia</h3>
+            </td>
+            <td><a href="#" class="banner__table--links">link4</a>
+              <span class="icon__item icon__item--tr icon-links"></span>
+              <span class="icon__item icon__item--tr icon-trash"></span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h3>quia</h3>
+            </td>
+            <td><a href="#" class="banner__table--links">link5</a>
+              <span class="icon__item icon__item--tr icon-links"></span>
+              <span class="icon__item icon__item--tr icon-trash"></span>
+            </td>
+          </tr>
+          <tr>
+            <td class="last--td">
+              <h3>quia</h3>
+            </td>
+            <td class="last--td">
+              <a href="#" class="banner__table--links">link6</a>
+                <span class="icon__item icon__item--tr icon-links"></span>
+                <span class="icon__item icon__item--tr icon-trash"></span>
+            </td>
+          </tr>
+        </table>
+      </div><!--end table-->
+      <button class="btn button--add">
+        add +
+      </button>
+      <div id="overaly" class="overaly">
+        <div class="modal" id="myModal">
+          <div class="btn--close js--close-modal">X</div>
+          <form action="" class="modall__form">
+            <div class="input--wraper">
+              <label for="name" class="modal__data--label">Title</label>
+              <input type="text" name="title-modal" id="title" class="modal__data--input req" required>
+            </div>
+            <div class="input--wraper">
+              <label for="link" class="modal--label">Link</label>
+              <input type="text" name="link-modal" id="link" class="modal__data--input req" required>
+            </div>
+          </form>
+        <button class="js--close-modal btn">Add</button>
+      </div>
+    </div>
+  </section><!--end banner-->
+</script>
+
+<script id="template-main-personal" type="text/x-handlebars-template">
+  <div class="container">
+    <div class="title">
+      <h2 class="title__header">
+        Personal Data
+      </h2>
+    </div><!--end title-->
+    <form class="personal">
+      <div class="personal__data">
+        <div class="input--wraper">
+          <label for="name" class="personal__data--label">Name</label>
+          <input type="text" name="user-name" id="name" class="personal__data--input req" required>
+        </div>
+        <div class="input--wraper">
+          <label for="surname" class="personal__data--label">Surname</label>
+          <input type="text" name="user-surname" id="surname" class="personal__data--input req" required>
+        </div>
+        <div class="input--wraper">
+          <label for="mail" class="personal__data--label">E-mail</label>
+          <input type="email" name="user-mail" id="mail" class="personal__data--input req" required>
+        </div>
+        <div class="input--wraper">
+          <label for="phone" class="personal__data--label">Phone</label>
+          <input type="number" name="user-phone" id="phone" class="personal__data--input">
+        </div>
+      </div><!--end prsonal data-->
+      <div class="personal__koms">
+        <div class="input--wraper">
+          <label for="skype" class="personal__data--label">skype</label>
+          <input type="text" name="user-skype" id="skype" class="personal__data--input">
+        </div>
+        <div class="input--wraper">
+          <label for="icq" class="personal__data--label">icq</label>
+          <input type="text" name="user-icq" id="icq" class="personal__data--input">
+        </div>
+        <div class="input--wraper">
+          <label for="msn" class="personal__data--label">msn</label>
+          <input type="email" name="user-msn" id="msn" class="personal__data--input">
+        </div>
+      </div><!--end koms-->
+      <div class="personal__wallet">
+        <div class="input--wraper">
+          <label for="wallet" class="personal__data--label">wallet</label>
+          <input type="text" name="user-wallet" id="wallet" class="personal__data--input">
+        </div>
+      </div><!--end wallet-->
+      <div class="personal__password">
+          <div class="input--wraper">
+            <label for="password" class="personal__data--label">password</label>
+            <input type="text" name="user-password" id="password" class="personal__data--input req" required>
+          </div>
+        <div class="input--wraper">
+          <label for="repeat" class="personal__data--label">repeat</label>
+          <input type="text" name="user-repeat" id="repeat" class="personal__data--input req" required>
+        </div>
+      </div><!--end password-->
+      <button type="submit" id="save" class="btn button--save">save</button>
+    </form>
+  </div>
+</script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+  <script src="./js/script.js" type="module"></script>
+</body>
+</html>
