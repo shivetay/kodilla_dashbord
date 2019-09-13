@@ -28,7 +28,7 @@ function overlaySelect() { // eslint-disable-line no-unused-vars
   });
 }
 
-function openModal(modal) { // eslint-disable-line no-unused-vars
+export function openModal(modal) { // eslint-disable-line no-unused-vars
   document.querySelectorAll('#overlay > *').forEach(function(modal) {
     modal.classList.remove('show');
   });

@@ -38,7 +38,6 @@ class Form {
     thisForm.dom.repeat = thisForm.dom.wrapper.querySelector(select.formItems.repeat);
   }
   
-  //TODO:
 	validateForm(){
     const thisForm = this;
     
@@ -46,20 +45,9 @@ class Form {
       e.preventDefault();
 
       thisForm.sendOrder();
-
-			// const formArr = document.querySelectorAll(select.htmlItems.formRerquaierd);
-
-			// for(let i = 0; i < formArr.length; i++){
-			// 	if(formArr[i].value === ''){
-			// 		console.log('puste');
-			// 	} else{
-			// 		console.log('pełne');
-			// 	}
-			// }
 		});
   }
 
-  // FIXME:
   sendOrder(){
     const thisForm = this;
     const url = select.db.url + '/' + select.db.form;

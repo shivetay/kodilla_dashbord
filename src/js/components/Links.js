@@ -7,7 +7,6 @@ class Link {
 		const thisLink = this;
 
 		thisLink.getElements(element);
-
 	}
 
 	getElements(element) {
@@ -34,10 +33,10 @@ class Link {
         container.appendChild(thisLink.dom.wrapper);
         
         thisLink.dom.btnAdd = thisLink.dom.wrapper.querySelector(select.htmlItems.btnAdd);
-        thisLink.dom.overlayBack = document.querySelector(select.classesNames.overlay);
-      }
-    }
-  }
+				thisLink.dom.overlayBack = document.querySelector(select.classesNames.overlay);
+			}
+		}
+	}
 }
 
 export default Link;
